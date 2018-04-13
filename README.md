@@ -1,6 +1,7 @@
-# Java small projects
-Assumes correct syntax. Simple and small projects. <br /> 
-Applications were Exported from Eclipse, and wrapped into an Executable by Launch4j. <br />
+# Java basic/novice projects
+Assumes correct syntax <br /> 
+Applications were Coded then Exported from Eclipse, and wrapped into an Executable by Launch4j <br />
+Note: Programs are stateless (does not retain information from session) <br />
 
 ## Bounce Application
 Note: Uses Swing & AWT (Contains quite a few bugs, not going to bother fixing an animation application)<br />
@@ -9,9 +10,10 @@ Animations of Shapes bouncing around a window. (GUI)<br />
 1) Set Shape
 2) Set Animation type
 3) Click on Start
-4) Click on screen to have the animation begin
+4) Click on screen to have the animation begin <br/> 
 
-Optional: May only select a shape whilst the application has 'Started' <br />
+![shapesanimation](https://user-images.githubusercontent.com/32786237/38756012-11fe4ad8-3fbc-11e8-8069-c81aa913fbe3.PNG)<br/>
+Optional: May only select a shape whilst the application has 'Start' <br />
 * Right-click to open option to clear screen <br />
 * Set Height, Width, Pen-width values of the shape (press Enter for every value change) <br />
 * Set Colour of the Shape's Border <br />
@@ -28,7 +30,10 @@ LOCAL: summing scheme that avoids majority of access of shared data <br />
 Run Coordinates Distance.exe  //src for source code <br />
 Note: JUnit testing files included  //src/JUnit testing files for source code <br />
 Point-to-point location on Earth distance calculator using Haversine formula (CUI) <br />
-Uses origin and destination longtitude and latitude coordinates <br />
+Uses origin and destination longtitude and latitude coordinates
+
+![coordinatesdistance](https://user-images.githubusercontent.com/32786237/38756017-149a63da-3fbc-11e8-8ab2-3e2711f953eb.PNG)
+<br/>
 
 ## Foreign Exchange
 Run forex.exe  //src for source code <br />
@@ -38,10 +43,11 @@ Currency exchange calculator (CUI)
 3) Show an Exchange Rate
 4) Convert an Amount
 
-Note: Program is stateless/does not retain information from session, assumes correct input syntax. <br />
+![foreignexchange](https://user-images.githubusercontent.com/32786237/38756019-157140da-3fbc-11e8-82d7-22d5b6c2efb8.PNG)
+<br/>
 
-================================================================================= <br />
-================================================================================= <br />
+=============================================================================== <br />
+=============================================================================== <br />
 
 # Handling Exceptions in Java
 https://stackify.com/best-practices-exceptions-java/ <br />
