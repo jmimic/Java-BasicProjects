@@ -1,0 +1,90 @@
+TestCoordinatePoint Class
+
+Currently tests:
+1. new coordinatePoint equals 0,0
+2. fail if longitude 180.1 (when latitude at bound) 180.1,90
+3. fail if latitude 90.1 (when longitude at bound) 180,90.1
+4. fail if longitude -180.1 (when latitude at bound) -180.1,90
+5. fail if latitude -90.1 (when longitude at bound) 180,-90.1
+6. new coordinatePoint equals (180,90)
+7. new coordinatePoint equals (-180,-90)
+
+8. getLong&getLat, new(25,65) (check get values)
+9. setLong at 0
+10. setLong at 180.1,90
+11. setLong -180.1,90
+12. setLong 999 (check e.msg)
+13. setLat 0
+14. setLat 180,90.1
+15. setLat 180,-90.1
+16. setLat 999 (check e.msg)
+
+--
+try + fail, catch + assert ~if you expecting fail
+catch + fail ~if you arent expecting fail
+--
+
+1. getOrigin at 180,90
+1. getOriginLongitude
+1. getOriginLatitude
+
+1. setOrigin(CoordinatePoint param) at 180,90
+2. setOrigin(CoordinatePoint param) at -180,-90 
+3. setOrigin at 180,90
+4. setOrigin at -180,-90
+5. setOrigin at 180.1,90 (expect: fail)
+6. setOrigin -180.1,90 (expect: fail)
+7. setOrigin 180,90.1 (expect: fail)
+8. setOrigin 180,-90.1 (expect: fail)
+9. setOrigin 999,0 (expect: fail)
+10. setOrigin 0,999 (expect: fail)
+
+1. setOriginLong(), new Nav, getOriginLong assert 180
+2. setOriginLong(), new Nav, getOriginLong 180.1 (expect: fail)
+3. setOriginLong(), new Nav, getOriginLong assert -180
+4. setOriginLong(), new Nav, getOriginLong -180.1 (expect: fail)
+5. setOriginLong(), new Nav, getOriginLong 999 (check e.msg)
+
+1. setOriginLat(), new Nav, getOriginLong assert 180
+2. setOriginLat(), new Nav, getOriginLong 180.1 (expect: fail)
+3. setOriginLat(), new Nav, getOriginLong assert -180
+4. setOriginLat(), new Nav, getOriginLong -180.1 (expect: fail)
+5. setOriginLat(), new Nav, getOriginLong 999 (check e.msg)
+
+(23 tests up to this point)
+
+1. getDestination at 180,90
+1. getDestinationLongitude
+1. getDestinationLatitude
+
+1. setDestination(CoordinatePoint param) at 180,90
+2. setDestination(CoordinatePoint param) at -180,-90 
+3. setDestination at 180,90
+4. setDestination at -180,-90
+5. setDestination at 180.1,90 (expect: fail)
+6. setDestination -180.1,90 (expect: fail)
+7. setDestination 180,90.1 (expect: fail)
+8. setDestination 180,-90.1 (expect: fail)
+9. setDestination 999,0 (expect: fail)
+10. setDestination 0,999 (expect: fail)
+
+1. setDestinationLong(), new Nav, getDestinationLong assert 180
+2. setDestinationLong(), new Nav, getDestinationLong 180.1 (expect: fail)
+3. setDestinationLong(), new Nav, getDestinationLong assert -180
+4. setDestinationLong(), new Nav, getDestinationLong -180.1 (expect: fail)
+5. setDestinationLong(), new Nav, getDestinationLong 999 (check e.msg)
+
+1. setDestinationLat(), new Nav, getDestinationLong assert 180
+2. setDestinationLat(), new Nav, getDestinationLong 180.1 (expect: fail)
+3. setDestinationLat(), new Nav, getDestinationLong assert -180
+4. setDestinationLat(), new Nav, getDestinationLong -180.1 (expect: fail)
+5. setDestinationLat(), new Nav, getDestinationLong 999 (check e.msg)
+
+(46 tests up to this point)
+
+1. distanceInKm setOrigin(174.77095, -36.85292)
+		setDestination(-73.98513,40.75889)
+1. distanceInNM setOrigin(174.77095, -36.85292)
+		setDestination(-73.98513,40.75889)
+
+(48 tests in total)
